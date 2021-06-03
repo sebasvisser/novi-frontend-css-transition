@@ -27,17 +27,33 @@
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
     position: absolute;
+    transition: transform 2s ease-in-out;
 }
 
 #menu::before {
     /*1 balkje naar boven plaatsen*/
     left: 0;
     top: -20px;
+    transform-origin: left bottom;
 }
 
 #menu::after {
     /*1 balkje naar beneden plaatsen*/
     left: 0;
     top: 20px;
+    transform-origin: left top;
 }
 
+#menu-container:hover > #menu {
+    background-color: rgba(0,0,0,0.0);
+}
+
+#menu-container:hover > #menu::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#menu-container:hover > #menu::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
