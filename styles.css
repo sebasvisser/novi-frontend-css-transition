@@ -4,16 +4,23 @@
     --menu-bar-color: #D84282;
 }
 
+#menu-container{
+    border: 5px solid darkolivegreen;
+    display: inline-flex;
+    width: auto;
+    padding: 22px 2px;
+}
+
 #menu {
     background-color: var(--menu-bar-color);
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
 }
 
 #menu::before,
 #menu::after {
+    /*Aanmaken van de andere 2 balkjes*/
     background-color: var(--menu-bar-color);
     display: block;
     content: "";
@@ -23,11 +30,13 @@
 }
 
 #menu::before {
+    /*1 balkje naar boven plaatsen*/
     left: 0;
     top: -20px;
 }
 
 #menu::after {
+    /*1 balkje naar beneden plaatsen*/
     left: 0;
     top: 20px;
 }
