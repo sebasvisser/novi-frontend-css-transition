@@ -1,10 +1,11 @@
 :root {
     --menu-bar-width: 60px;
     --menu-bar-height: 10px;
+    --menu-bar-color: #D84282;
 }
 
 #menu {
-    background-color: #D84282;
+    background-color: var(--menu-bar-color);
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
@@ -13,7 +14,7 @@
 
 #menu::before,
 #menu::after {
-    background-color: #D84282;
+    background-color: var(--menu-bar-color);
     display: block;
     content: "";
     width: var(--menu-bar-width);
